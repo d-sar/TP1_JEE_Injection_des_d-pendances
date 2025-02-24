@@ -2,15 +2,22 @@ package metier;
 
 import dao.DaoImp;
 import dao.IDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+@Service("metier")
 
 public class MetierImp implements Imetier {
+
     // coublage faible
     private IDAO dao ; // polymorphisme => private IDAO dao = new DaoImp();
 
  public MetierImp() {
-
+this.dao = new DaoImp();
  }
-    public MetierImp(IDAO dao) {
+    public MetierImp(@Qualifier("dao2") IDAO dao) {
         this.dao = dao;
     }
 

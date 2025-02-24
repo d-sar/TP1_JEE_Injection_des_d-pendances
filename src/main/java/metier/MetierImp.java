@@ -8,7 +8,7 @@ public class MetierImp implements Imetier {
     private IDAO dao ; // polymorphisme => private IDAO dao = new DaoImp();
 
  public MetierImp() {
-     dao = new DaoImp();
+
  }
     public MetierImp(IDAO dao) {
         this.dao = dao;

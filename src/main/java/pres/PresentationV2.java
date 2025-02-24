@@ -17,7 +17,7 @@ public class PresentationV2 {
 
             String metierClassname = scan.nextLine();
             Class cMetier = Class.forName(metierClassname);
-            // par constructeur 
+            // par constructeur
             //Imetier metier = (Imetier) cMetier.getConstructor(IDAO.class).newInstance(dao); // comme new instance
 
             // par setter metier.setDao(d)
